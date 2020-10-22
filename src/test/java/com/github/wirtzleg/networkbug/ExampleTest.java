@@ -3,6 +3,7 @@ package com.github.wirtzleg.networkbug;
 import java.time.Duration;
 import dasniko.testcontainers.keycloak.KeycloakContainer;
 import org.junit.jupiter.api.Test;
+import org.testcontainers.Testcontainers;
 import org.testcontainers.containers.ContainerLaunchException;
 import org.testcontainers.containers.Network;
 
@@ -10,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ExampleTest {
     static {
-        org.testcontainers.Testcontainers.exposeHostPorts(8080);
+        Testcontainers.exposeHostPorts(8080);
     }
 
     @Test
